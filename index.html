@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford vs Ferrari: A Guerra no Asfalto</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: linear-gradient(135deg, #00274C 0%, #ED1C24 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images.jpeg') center/cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        header * {
+            position: relative;
+            z-index: 1;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, #00274C, #ED1C24);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 10px;
+        }
+        .event {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .event::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 4px solid #00274C;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .right::after {
+            border-color: #ED1C24;
+            left: -16px;
+        }
+        .left::after {
+            right: -16px;
+        }
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .ford-color {
+            border-left: 5px solid #00274C;
+        }
+        .ferrari-color {
+            border-right: 5px solid #ED1C24;
+        }
+        .car-comparison {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .car-card {
+            width: 48%;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .car-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .ford-header {
+            background: #00274C;
+            color: white;
+            padding: 15px;
+        }
+        .ferrari-header {
+            background: #ED1C24;
+            color: white;
+            padding: 15px;
+        }
+        .car-specs {
+            padding: 20px;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .event {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .event::after {
+                left: 18px;
+            }
+            .left::after, .right::after {
+                left: 18px;
+            }
+            .right {
+                left: 0;
+            }
+            .car-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ford vs Ferrari: A Guerra no Asfalto</h1>
+            <p>1963-1969: A épica batalha que mudou o automobilismo para sempre</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="introduction">
+            <h2>O Início de Tudo</h2>
+            <p>Nos anos 1960, o mundo do automobilismo testemunhou uma das maiores rivalidades da história: a batalha entre a gigante americana Ford e a lendária Ferrari nas 24 Horas de Le Mans. Esta não foi apenas uma competição entre montadoras, mas uma guerra de egos, tecnologia e determinação que produziu alguns dos carros mais icônicos já criados.</p>
+            
+            <div class="car-comparison">
+                <div class="car-card">
+                    <div class="ford-header">
+                        <h3>Ford Motor Company</h3>
+                    </div>
+                    <img src="2768911.jpeg" alt="Ford GT40">
+                    <div class="car-specs">
+                        <p>Fundada por Henry Ford em 1903, a Ford revolucionou a indústria automobilística com a produção em massa. Nos anos 60, buscava expandir seu prestígio para além dos carros de produção em série.</p>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="ferrari-header">
+                        <h3>Scuderia Ferrari</h3>
+                    </div>
+                    <img src="1964-ferrari-250-lm-1.jpg" alt="Ferrari 250 LM">
+                    <div class="car-specs">
+                        <p>Fundada por Enzo Ferrari em 1929 como divisão de corridas da Alfa Romeo, tornou-se independente após a Segunda Guerra. Era sinônimo de excelência em corridas de endurance, especialmente em Le Mans.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline">
+            <h2 style="text-align: center; margin: 50px 0;">Linha do Tempo: A Batalha por Le Mans</h2>
+            
+            <div class="timeline">
+                <div class="event left">
+                    <div class="content ford-color">
+                        <h3>1963: A Tentativa de Compra</h3>
+                        <p>Henry Ford II inicia negociações para comprar a Ferrari, buscando entrar no mundo das corridas de elite. As negociações avançam, mas fracassam no último momento quando Enzo Ferrari se recusa a ceder o controle da divisão de competição.</p>
+                    </div>
+                </div>
+                
+                <div class="event right">
+                    <div class="content ferrari-color">
+                        <h3>1963: A Resposta de Ferrari</h3>
+                        <p>Ofendido pelas tentativas da Ford, Enzo Ferrari chama Henry Ford II de "o fabricante de carros baratos de Detroit". A Ferrari continuava dominando Le Mans, vencendo a prova em 1963 com o 250 P.</p>
+                    </div>
+                </div>
+                
+                <div class="event left">
+                    <div class="content ford-color">
+                        <h3>1964: O Projeto GT Começa</h3>
+                        <p>Henry Ford II ordena a criação de um carro capaz de derrotar a Ferrari em Le Mans. A Ford se associa à Lola (que tinha um protótipo promissor) e depois contrata Carroll Shelby e Ken Miles para desenvolver o que viria a ser o GT40.</p>
+                    </div>
+                </div>
+                
+                <div class="event right">
+                    <div class="content ferrari-color">
+                        <h3>1964: Ferrari 275 P e 330 P</h3>
+                        <p>A Ferrari continua inovando com os modelos 275 P e 330 P, vencendo novamente Le Mans em 1964. A equipe italiana parece imbatível, com uma combinação perfeita de leveza e potência.</p>
+                    </div>
+                </div>
+                
+                <div class="event left">
+                    <div class="content ford-color">
+                        <h3>1965: O Fracasso Inicial</h3>
+                        <p>O GT40 sofre problemas de confiabilidade em sua estreia em Le Mans. Todos os carros da Ford abandonam a prova antes da metade, enquanto a Ferrari conquista mais uma vitória com o 250 LM.</p>
+                    </div>
+                </div>
+                
+                <div class="event right">
+                    <div class="content ferrari-color">
+                        <h3>1965-1966: Ferrari 330 P3</h3>
+                        <p>A Ferrari desenvolve o avançado 330 P3 com injeção mecânica de combustível e aerodinâmica refinada. Parece ser o carro a ser batido na temporada de 1966.</p>
+                    </div>
+                </div>
+                
+                <div class="event left">
+                    <div class="content ford-color">
+                        <h3>1966: A Virada</h3>
+                        <p>Com melhorias significativas no GT40 Mk II (agora com motor 7.0L V8), a Ford finalmente triunfa em Le Mans, conquistando não apenas a vitória mas um 1-2-3 histórico. Ken Miles liderava até ser ordenado a reduzir velocidade para um empate fotográfico com Bruce McLaren.</p>
+                    </div>
+                </div>
+                
+                <div class="event right">
+                    <div class="content ferrari-color">
+                        <h3>1967: A Resposta da Ferrari</h3>
+                        <p>A Ferrari contra-ataca com o 330 P4, vencendo Daytona mas falhando em Le Mans. A Ford domina novamente com o GT40 Mk IV.</p>
+                    </div>
+                </div>
+                
+                <div class="event left">
+                    <div class="content ford-color">
+                        <h3>1968-1969: O Domínio Ford</h3>
+                        <p>A Ford vence Le Mans por quatro anos consecutivos (1966-1969), estabelecendo um novo padrão nas corridas de endurance. A Ferrari se retira temporariamente das competições de protótipos para focar na Fórmula 1.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="legacy">
+            <h2>O Legado da Rivalidade</h2>
+            <p>A batalha entre Ford e Ferrari produziu avanços tecnológicos que influenciaram tanto os carros de competição quanto os de rua. Alguns dos legados mais importantes:</p>
+            
+            <div class="car-comparison">
+                <div class="car-card">
+                    <div class="ford-header">
+                        <h3>Contribuições da Ford</h3>
+                    </div>
+                    <ul style="padding: 20px;">
+                        <li>Popularizou o uso de motores grandes V8 em carros de competição</li>
+                        <li>Desenvolvimento de aerodinâmica eficiente para altas velocidades</li>
+                        <li>Provas de que montadoras de produção em massa podiam competir com fabricantes especializados</li>
+                        <li>Inovações em refrigeração e confiabilidade mecânica</li>
+                    </ul>
+                </div>
+                
+                <div class="car-card">
+                    <div class="ferrari-header">
+                        <h3>Contribuições da Ferrari</h3>
+                    </div>
+                    <ul style="padding: 20px;">
+                        <li>Perfeiçoamento de motores V12 de alta rotação</li>
+                        <li>Pioneirismo no uso de materiais leves como alumínio</li>
+                        <li>Desenvolvimento de chassis monocoque para carros esportivos</li>
+                        <li>Estabelecimento do padrão de excelência em engenharia italiana</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p>Esta rivalidade foi imortalizada no cinema com o filme "Ford vs Ferrari" (2019), estrelado por Matt Damon (Carroll Shelby) e Christian Bale (Ken Miles), que trouxe a história para novas gerações de entusiastas do automobilismo.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Ford vs Ferrari - História do Automobilismo</p>
+            <p>Site educativo sem fins comerciais | Imagens meramente ilustrativas</p>
+            <p>Fontes: Arquivos históricos da Ford e Ferrari, documentários automotivos, "Go Like Hell" de A.J. Baime</p>
+        </div>
+    </footer>
+</body>
+</html>
